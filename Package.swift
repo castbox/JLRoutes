@@ -1,4 +1,4 @@
-// swift-tools-version:5.4
+// swift-tools-version:5.5
 
 import PackageDescription
 
@@ -18,9 +18,9 @@ let package = Package(
     targets: [
         .target(
             name: "JLRoutes",
+            dependencies: [],
             path: "JLRoutes",
-            publicHeadersPath: "."
+            resources: [.process("PrivacyInfo.xcprivacy")]
         ),
-    ],
-    swiftLanguageVersions: [.v5]
+    ]
 )
