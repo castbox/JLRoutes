@@ -1,11 +1,11 @@
 Pod::Spec.new do |s|
   s.name         = "JLRoutes"
-  s.version      = "2.2.0"
+  s.version      = "2.2.1"
   s.summary      = "URL routing library for iOS with a simple block-based API."
   s.homepage     = "https://github.com/castbox/JLRoutes"
   s.license      = "BSD 3-Clause \"New\" License"
   s.author       = { "Joel Levin" => "joel@joeldev.com" }
-  s.source       = { :git => "https://github.com/castbox/JLRoutes.git", :tag => "2.2.0" }
+  s.source       = { :git => "https://github.com/castbox/JLRoutes.git", :tag => s.version.to_s }
   s.framework    = 'Foundation'
   s.requires_arc = true
 
@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
   
   s.subspec 'Privacy' do |ss|
       ss.resource_bundles = {
-        "Privacy" => 'JLRoutes/PrivacyInfo.xcprivacy'
+          s.name => 'JLRoutes/PrivacyInfo.xcprivacy'
       }
   end
 end
